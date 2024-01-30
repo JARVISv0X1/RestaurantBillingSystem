@@ -1,24 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
-
+import logo from "./logo.svg";
+import "./App.css";
+import BillingForm from "./components/BillingForm";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <div className="mx-auto">
+    <h1 className="mx-auto mt-1 text-center">Resturant Billing system</h1>
+    <BillingForm className="mt-5 table"></BillingForm>
     </div>
+      
+    </>
   );
 }
 
