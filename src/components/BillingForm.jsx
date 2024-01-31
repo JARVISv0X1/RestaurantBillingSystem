@@ -1,15 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import dish from "../dish";
 import ItemLists from "./ItemLists";
 import ReciptReviewCard from "./ReciptReviewCard";
 
 export default function BillingForm({ ...prop }) {
-  // let billingObject = {
-  //   totalSigret: "0",
-  //   totalWiskey: "0",
-  //   totalRum: "0",
-  //   totalGin: "0",
-  // };
   let [date, setDate] = useState(0);
   let [totalBill, setTotalBill] = useState(0);
   let [reciptObject, setReciptObject] = useState([]);
@@ -43,12 +37,6 @@ export default function BillingForm({ ...prop }) {
         console.log(` dish [${dId}].totalItems: ` + dish[dId].totalItems);
       }
     }
-    reciptObject[dId] = dish[dId];
-    console.log(
-      ` reciptObject [${dId}]: ` + reciptObject[dId].dishName,
-      reciptObject[dId].pricePerItem,
-      reciptObject[dId].totalItems
-    );
   }
 
   function calculateTotalBill({ dish }) {
