@@ -32,7 +32,7 @@ export default function ItemLists({
             )}
           </div>
         </td>
-        {Input ? "" : <td className="w-25">{dPrice * dTotal}</td>}
+        {Input ? "" : <td className="w-25">{dPrice * dTotal} INR</td>}
       </tr>
     </>
   );

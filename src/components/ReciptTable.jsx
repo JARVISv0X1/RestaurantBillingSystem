@@ -1,9 +1,9 @@
 import ItemLists from "./ItemLists";
-export default function ReciptTable({ noOfItems }) {
+export default function ReciptTable({ noOfItems, ...prop }) {
   const { dish } = noOfItems;
   return (
     <>
-      <table>
+      <table {...prop}>
         <thead>
           <tr>
             <th className="w-25">ID</th>

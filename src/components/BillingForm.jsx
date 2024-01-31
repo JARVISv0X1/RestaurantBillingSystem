@@ -111,7 +111,7 @@ export default function BillingForm({ ...prop }) {
         );
       })}
       <div className="container d-flex align-items-sm-center">
-        <h3 className="mx-auto mt-3">Total bill : {totalBill}</h3>
+        <h3 className="mx-auto mt-3">Total bill : {totalBill} INR</h3>
       </div>
       <div className="container d-flex align-items-sm-center">
         {showGenerateBill ? (
@@ -137,13 +137,14 @@ export default function BillingForm({ ...prop }) {
       </div>
 
       <div className="container" id="reciptCard">
-        <div className="row w-25 mx-auto">
+        <div className="row w-50 mx-auto">
           {reciptDisplay ? (
             <ReciptReviewCard
               onSelect={() => reciptDisplayManager(reciptObject)}
               TotalItems={reciptObject}
               totalBill={totalBill}
               date={date}
+              className="mt-5 table"
             ></ReciptReviewCard>
           ) : (
             ""

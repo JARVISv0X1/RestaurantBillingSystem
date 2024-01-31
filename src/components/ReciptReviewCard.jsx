@@ -16,7 +16,7 @@ export default function ReciptReviewCard({
   date,
 }) {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card>
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
@@ -33,7 +33,10 @@ export default function ReciptReviewCard({
       />
 
       <CardContent>
-        <ReciptTable noOfItems={TotalItems}></ReciptTable>
+        <ReciptTable
+          className="mt-5 table"
+          noOfItems={TotalItems}
+        ></ReciptTable>
       </CardContent>
       <CardFooter totalBill={totalBill}></CardFooter>
       <CardActions disableSpacing>
